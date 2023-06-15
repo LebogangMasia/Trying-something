@@ -9,18 +9,18 @@ import speech_recognition as sr
 from EdgeGPT import Chatbot, ConversationStyle
 
 # Initialize the OpenAI API
-openai.api_key = "[paste your OpenAI API key here]"
+openai.api_key = "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" # My personal API key
 
 # Create a recognizer object and wake word variables
 recognizer = sr.Recognizer()
 BING_WAKE_WORD = "bing"
-GPT_WAKE_WORD = "royal"
+ROYAL_WAKE_WORD = "royal"
 
 def get_wake_word(phrase):
     if BING_WAKE_WORD in phrase.lower():
         return BING_WAKE_WORD
-    elif GPT_WAKE_WORD in phrase.lower():
-        return GPT_WAKE_WORD
+    elif ROYAL_WAKE_WORD in phrase.lower():
+        return ROYAL_WAKE_WORD
     else:
         return None
     
